@@ -3,55 +3,65 @@
 export const particlesOptions : IParticlesParams = {
     "particles": {
         "number": {
-            "value": 25,
+            "value": 160,
             "density": {
                 "enable": true,
-                "value_area": 1000
+                "value_area": 800
             }
         },
         "color": {
-            "value": "#db7f8e"
+            "value": "#ffffff"
         },
         "shape": {
-            "type": "polygon",
+            "type": "circle",
             "stroke": {
-                "width": 3,
-                "color": "#604d53"
+                "width": 0,
+                "color": "#000000"
             },
             "polygon": {
-                "nb_sides": 6
+                "nb_sides": 5
             },
-
         },
         "opacity": {
-            "value": 0.25,
+            "value": 1,
             "random": true,
             "anim": {
-                "enable": false,
+                "enable": true,
                 "speed": 1,
-                "opacity_min": 0.1,
+                "opacity_min": 0,
                 "sync": false
             }
         },
         "size": {
-            "value": 12,
+            "value": 3,
             "random": true,
+            "anim": {
+                "enable": true,
+                "speed": 4,
+                "size_min": 0.3,
+                "sync": false
+            }
         },
         "line_linked": {
             "enable": false,
-            "distance": 83,
-            "color": "#ffdbda",
-            "opacity": 0.3,
-            "width": 1.8
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
         },
         "move": {
             "enable": true,
-            "speed": 3,
-            "direction": "top-right",
+            "speed": 1,
+            "direction": "none",
             "random": true,
-            "straight": true,
-            "out_mode": "bounce",
-            "bounce": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 600
+            }
         }
     },
     "interactivity": {
@@ -59,29 +69,29 @@ export const particlesOptions : IParticlesParams = {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "grab"
+                "mode": "bubble"
             },
             "onclick": {
                 "enable": false,
-                "mode": "push"
+                "mode": "repulse"
             },
             "resize": true
         },
         "modes": {
             "grab": {
-                "distance": 275,
+                "distance": 400,
                 "line_linked": {
-                    "opacity": 0.7
+                    "opacity": 1
                 }
             },
             "bubble": {
-                "distance": 400,
-                "size": 40,
+                "distance": 250,
+                "size": 0,
                 "duration": 2,
-                "opacity": 8
+                "opacity": 0
             },
             "repulse": {
-                "distance": 200,
+                "distance": 400,
                 "duration": 0.4
             },
             "push": {
