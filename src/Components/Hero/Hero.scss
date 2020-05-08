@@ -24,22 +24,10 @@
 }
 .curiosity{
     h1 {
-        background-color: $curiosity-theme-color;
         font-size: 40px;
     }
 }
 
-.opportunity{
-    h1 {
-        background-color: $opportunity-theme-color;
-    }
-}
-
-.spirit{
-    h1 {
-        background-color: $spirit-theme-color;
-    }
-}
 
 @media (min-width: 500px){
     .hero h1{

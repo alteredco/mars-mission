@@ -24,21 +24,13 @@
 
   
   @mixin alignment($background-color, $foreground-color) {
-    background-color: $background-color;
     text-decoration: none;
-    color: $foreground-color;
     flex-wrap: wrap;
     justify-content : flex-start;
    
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
-    
-
-    :hover {
-      @include text-on-dark-background-hover;
-      font-size: 2em;
-    }
   }
   
   @mixin nav-image($border-color){
@@ -53,7 +45,6 @@
   
   .rightAlign{
     @include alignment($theme-color-dark, $theme-color-light);
-    background-color: $theme-color-dark;
     flex-direction: column;
     
     .roverNavImage{
