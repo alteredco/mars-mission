@@ -8,9 +8,9 @@ $scale: 1vw;
 
 @mixin theme-borders($border-color: $curiosity-theme-color) {
   border-style: solid;
-  border-width: .2*$scale;
+  border-width: 0.2 * $scale;
   border-color: $border-color;
-  border-radius: .2*$scale;
+  border-radius: 0.2 * $scale;
 }
 
 @mixin theme-headers($background-color: $curiosity-theme-color) {
@@ -20,19 +20,18 @@ $scale: 1vw;
 /* Site colours */
 $curiosity-theme-color: rgba(94, 7, 30, 0.91);
 $theme-color-dark: rgb(12, 2, 16);
-$opportunity-theme-color:	rgba(206, 66, 87, 1);
-$spirit-theme-color:	rgba(255, 127, 81, 1);
+$opportunity-theme-color: rgba(206, 66, 87, 1);
+$spirit-theme-color: rgba(255, 127, 81, 1);
 $theme-color-light: rgba(4, 1, 6, 0.55);
 $font-color-light: rgb(255, 255, 255);
 
 /* Site Fonts */
-$font-family-OpenSans:'Roboto', sans-serif;
-$font-family-headers:'Oxanium', cursive;
+$font-family-OpenSans: "Roboto", sans-serif;
+$font-family-headers: "Oxanium", cursive;
 
-
-$para-font-size:1em;
-$quote-font-size:.95em;
-$label-font-size:.90em;
+$para-font-size: 1em;
+$quote-font-size: 0.95em;
+$label-font-size: 0.9em;
 $navbar-font-size: 20px;
 $navbar-font-size-larger-screens: 40px;
 $header-three-font-size: 1.5em;
@@ -41,14 +40,14 @@ $header-one-font-size: 2.5em;
 
 @mixin standard-border($border-color: $theme-color-dark) {
   border-style: outset;
-  border-width: .2*$scale;
+  border-width: 0.2 * $scale;
   border-color: $border-color;
 }
 @mixin navbar-font($font-size: $navbar-font-size) {
   font-family: $font-family-headers;
   font-size: $font-size;
   color: $font-color-light;
-  padding-right: 4*$scale;
+  padding-right: 4 * $scale;
 }
 
 @mixin html-base-font {
@@ -59,4 +58,16 @@ $header-one-font-size: 2.5em;
 @mixin text-on-dark-background-hover {
   text-decoration: none;
   color: $theme-color-light;
+}
+
+@mixin atSmall {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin atMed {
+  @media (max-width: 1800px) {
+    @content;
+  }
 }

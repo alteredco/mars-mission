@@ -1,70 +1,69 @@
 ﻿@import "../../ConstantsMixins";
-.roverNav{
+.roverHome__container {
+  height: 100%;
+}
+
+.roverNav {
   margin-top: 100px;
   padding-left: 0;
-  
+
   .roverNavItem {
     @include navbar-font();
     display: flex;
     align-items: center;
-    height : 30vh;
+    height: 30vh;
     font-family: $font-family-headers;
-    
-    .roverNavLink{
+
+    .roverNavLink {
       font-size: 4rem;
       letter-spacing: 1rem;
       padding: 10px 7vw;
-      height : 30px;
-      transition: all .8s ease-in-out;
-      transition-delay: .2s;
-      
+      height: 30px;
+      transition: all 0.8s ease-in-out;
+      transition-delay: 0.2s;
     }
   }
-  
 
-  
   @mixin alignment($background-color, $foreground-color) {
     text-decoration: none;
     flex-wrap: wrap;
-    justify-content : flex-start;
-   
+    justify-content: flex-start;
+
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
   }
-  
-  @mixin nav-image($border-color){
+
+  @mixin nav-image($border-color) {
     width: auto;
     height: 50%;
     border-radius: 50%;
     margin-top: 6px;
     border: solid 5px $border-color;
-    
-  
   }
-  
-  .rightAlign{
+
+  .rightAlign {
     @include alignment($theme-color-dark, $theme-color-light);
     flex-direction: column;
-    
-    .roverNavImage{
+
+    .roverNavImage {
       @include nav-image($theme-color-light);
     }
-    @media (min-width: 350px)  {
-      flex-direction : row;
+    @media (min-width: 350px) {
+      flex-direction: row;
       padding-left: 100px;
     }
   }
-  
-  .leftAlign{
+
+  .leftAlign {
     @include alignment($theme-color-light, $theme-color-dark);
-    flex-direction : column;
-    .roverNavImage{
+    flex-direction: column;
+    .roverNavImage {
       @include nav-image($theme-color-dark);
     }
 
-    @media (min-width: 350px)  {
-      flex-direction : row-reverse;
+    @media (min-width: 350px) {
+      flex-direction: row-reverse;
       padding-right: 100px;
     }
   }

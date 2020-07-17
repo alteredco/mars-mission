@@ -1,1 +1,1 @@
-﻿export type RoverName = 'Curiosity' | 'Spirit'  | 'Opportunity';
+﻿export type RoverName = "Curiosity" | "Spirit" | "Opportunity" | "Welcome";

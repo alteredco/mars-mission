@@ -1,0 +1,33 @@
+@import "../../ConstantsMixins.scss";
+.heroImage {
+  margin-bottom: 2em;
+  @include atSmall {
+    min-height: 30vh;
+  }
+  @include atMed {
+    max-height: 50vh;
+  }
+}
+
+.childList {
+  margin-bottom: 2vh;
+}
+
+.childLink {
+  border-radius: 25px;
+  @include atSmall {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 5em;
+  }
+  @include atMed {
+    margin-left: 1em;
+    font-size: 3em;
+    padding: 0.5em;
+  }
+  &:hover {
+    background-color: $theme-color-light;
+    color: $spirit-theme-color;
+  }
+}
