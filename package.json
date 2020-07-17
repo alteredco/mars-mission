@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=react-scripts build && echo '/* /index.html 200' | cat >build/_redirects",
+    "build": "CI=react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint --ext js,ts,tsx src",
     "eject": "react-scripts eject"
